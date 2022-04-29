@@ -7,8 +7,9 @@ PGN Games Retrievers for Chess.com and Lichess.org chess sites. It retrievers on
 
 **Instructions**:
 
-1) Add nicknames one per line;
-2) Press "Process" button;
-3) Wait. To exit, press "Exit".
+1) Open the .py file. In Windows, it is also possible to open the .exe file
+2) Add nicknames one per line;
+3) Press "Process" button;
+4) Wait. To exit, press "Exit".
 
 All results are in the separate folders created by the program. For chess.com, **ChessComGames-->[nickname]. For lichess.org, LichessOrgGames-->[nickname]**.
