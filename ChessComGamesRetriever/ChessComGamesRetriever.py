@@ -37,8 +37,9 @@ def process():
                 test = json.load(f)
                 List_of_Players = test
                 for i in range(len(test['games'])):
-                    if((test['games'][i]['rules'] == 'chess') and (test['games'][i]['time_class'] != 'bullet')):
-                        pgn_games = pgn_games+(test['games'][i]['pgn'])+"\n\n"
+                    if('pgn' in test['games'][i]):
+                        if((test['games'][i]['rules'] == 'chess') and (test['games'][i]['time_class'] != 'bullet')):
+                            pgn_games = pgn_games+(test['games'][i]['pgn'])+"\n\n"
             filename = "ChessCom_"+username+".pgn"
             fullfilename = os.path.join(myPath, filename)
             file_results_log = open(fullfilename,"w+", encoding="utf-8")
@@ -76,5 +77,3 @@ if __name__ == "__main__":
     T.insert(tk.END, List_of_Players)
     
     tk.mainloop()
-
-
